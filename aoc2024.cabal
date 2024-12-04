@@ -35,6 +35,8 @@ library
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
   build-depends:
       base >=4.7 && <5
+    , mtl
+    , regex-tdfa
   default-language: Haskell2010
 
 executable aoc2024-01
@@ -49,6 +51,8 @@ executable aoc2024-01
   build-depends:
       aoc2024
     , base >=4.7 && <5
+    , mtl
+    , regex-tdfa
   default-language: Haskell2010
 
 executable aoc2024-02
@@ -63,6 +67,24 @@ executable aoc2024-02
   build-depends:
       aoc2024
     , base >=4.7 && <5
+    , mtl
+    , regex-tdfa
+  default-language: Haskell2010
+
+executable aoc2024-03
+  main-is: Main.hs
+  other-modules:
+      Paths_aoc2024
+  autogen-modules:
+      Paths_aoc2024
+  hs-source-dirs:
+      app/day03
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      aoc2024
+    , base >=4.7 && <5
+    , mtl
+    , regex-tdfa
   default-language: Haskell2010
 
 test-suite aoc2024-test
@@ -78,4 +100,6 @@ test-suite aoc2024-test
   build-depends:
       aoc2024
     , base >=4.7 && <5
+    , mtl
+    , regex-tdfa
   default-language: Haskell2010
